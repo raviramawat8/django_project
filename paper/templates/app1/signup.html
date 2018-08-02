@@ -1,0 +1,50 @@
+{% include 'app1/header.html' %}
+{% block head %}
+{% endblock %}
+<div style="height:1500px"
+	</div>
+					<div class="search_section d-flex flex-column align-items-center justify-content-center" style="padding-top: 300px">
+						<div class="search_background" style="background-image:url(images/search_background.jpg);"></div>
+						<div class="search_content text-center">
+
+                            <h1 align = 'center'class="search_title" style="padding-left:10px;border-radius:100px;font-family: Lucida Calligraphy"> Signup Here</h1>
+							    <table>
+                                    <nav>
+                                        <form id="search_form" class="search_form" action="/app1/sign/" method="post">
+                                            {% csrf_token %}
+                                            <tr>
+							                        <td class="jj">Username:</td>
+							                        <td><p><input type = 'text' placeholder = 'Type your Username here' name="UserName"/></p></td>
+						                    </tr>
+                                            <tr>
+							                        <td class="jj">Name:</td>
+							                        <td><p><input type = 'text' placeholder = 'Type your Full Name here' name="Name"/></p></td>
+						                    </tr>
+						                    <tr>
+							                        <td class="jj">Email:</td>
+                                                    <td><p><input type = 'email' placeholder = 'Type your Email here' name="Email"/></p></td>
+						                    </tr>
+						                    <tr>
+							                       <td class="jj">Set Password:</td>
+                                                     <td><p><input type = 'password' placeholder = 'Type your Password here' name="Password"></p></td>
+						                    </tr>
+						                    <tr>
+							                         <td class="jj">Confirm Password:</td>
+							                        <td><p><input type = 'password' placeholder = 'Type Password again' name="pass1"></p></td>
+						                    </tr>
+						                    <tr>
+
+                                                <td class="jj">Phone_no:</td>
+							                        <td><p><input type ='text' placeholder = 'Enter your phone_no here' name="Phoneno"></p></td>
+						                    </tr>
+						                    <tr>
+							                        <td></td>
+							                        <td class="jj"><p><input type = 'submit' value ='Signup' style ="width:100px"></p></td>
+						                    </tr>
+                                        </form>
+                                    </nav>
+                                </table>
+						</div>
+{% include 'app1/footer.html' %}
+{% block footer %}
+{% endblock %}
